@@ -12,9 +12,9 @@ var app = builder.Build();
 
 
 // Example of a middleware implementation
-app.Run(async (context) => {
-    await context.Response.WriteAsync("Hello, asp.net");
-});
+//app.Run(async (context) => {
+//    await context.Response.WriteAsync("Hello, asp.net");
+//});
 
 
 //Configure the HTTP request pipeline.
@@ -27,7 +27,12 @@ app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
+//app.UseRouting();
+
 app.UseAuthorization();
+
+//app.UseEndpoints(endpoints => endpoints.MapControllers());
+
 
 app.MapControllers();
 
